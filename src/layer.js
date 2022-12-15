@@ -1,3 +1,5 @@
+//Contains the path and necessary function reference to execute when a path matches the given request.
+
 function layer(path, options, fn) {
   if (!(this instanceof layer)) {
     return new layer(path, options, fn)

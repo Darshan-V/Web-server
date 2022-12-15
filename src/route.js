@@ -2,6 +2,8 @@ import methods from 'methods'
 import flatten from 'array-flatten'
 import layer from './layer'
 
+//Going to hold information about the route and the layer, which has the handles for a given path.
+
 function Route(path) {
   this.path = path
   this.stack = [] // to store route config

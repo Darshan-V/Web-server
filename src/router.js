@@ -3,6 +3,7 @@ import Route from './route'
 import layer from './layer'
 import layer from './layer'
 
+//has routing logic one per application
 let proto = function (options) {
   let opt = options || {}
   function router(req, res, next) {
@@ -20,7 +21,7 @@ let proto = function (options) {
 
 proto.route = function route(path) {
   let route = new Route(path)
-  let Layer = new layer(path, {}, route.dispatch.bind(route))
+  let Layer = new layer(path, {}, route.dispatch.bind(route)) // to empty the function
 
   Layer.route = route
   this.stack.push(Layer)
@@ -34,3 +35,5 @@ proto.handle = function handle(req, res, out) {
   let route = Layer.route
   route.stack[0].handle_request(req, res)
 }
+
+export default proto

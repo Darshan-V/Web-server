@@ -1,11 +1,10 @@
 import methods from 'methods'
 import flatten from 'array-flatten'
 import layer from './layer'
-import layer from './layer'
 
 function Route(path) {
   this.path = path
-  this.stack = []
+  this.stack = [] // to store route config
   this.methods = {}
 }
 
@@ -22,11 +21,13 @@ methods.forEach(function (method) {
           'Route.' + method + '() require a callback function but got a' + type
         throw new Error(msg)
       }
-      let layer = layer('/', {}, handle)
-      layer.method = method
+      let Layer = layer('/', {}, handle)
+      Layer.method = method
       this.methods[method] = true
-      this.stack.push(layer)
+      this.stack.push(Layer)
     }
     return this
   }
 })
+
+export default Route

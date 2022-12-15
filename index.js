@@ -1,2 +1,2 @@
-import server from './src/server.js'
-export default server
+import myExpress from './lib/myexpress.js'
+export default myExpress

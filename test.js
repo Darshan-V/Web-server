@@ -5,7 +5,7 @@ const app = myExpress()
 
 // app.use(serveStatic('public', { index: ['default.html', 'default.htm'] })) //TODO : use middleware app.use pending
 
-app.get('/morning/:name', function (req, res) {
+app.get('/:name', function (req, res) {
   res.send('Good morning, ' + req.params['name'])
 })
 

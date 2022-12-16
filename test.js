@@ -1,11 +1,9 @@
 import myExpress from './lib/myexpress.js'
-// import { fileURLToPath } from 'url'
-// import { dirname } from 'path'
-
-// const __filename = fileURLToPath(import.meta.url)
-// const __dirname = dirname(__filename)
+import serveStatic from 'serve-static'
 
 const app = myExpress()
+
+// app.use(serveStatic('public', { index: ['default.html', 'default.htm'] })) //TODO : use middleware app.use pending
 
 app.get('/morning/:name', function (req, res) {
   res.send('Good morning, ' + req.params['name'])

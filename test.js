@@ -1,21 +1,17 @@
 import myExpress from './lib/myexpress.js'
-import serveStatic from 'serve-static'
+let app = myExpress()
 
-const app = myExpress()
+const requestTime = function (req, res, next) {
+  req.requestTime = Date.now()
+  next()
+}
+app.use(requestTime)
 
-// app.use(serveStatic('public', { index: ['default.html', 'default.htm'] })) //TODO : use middleware app.use pending
-
-app.get('/:name', function (req, res) {
-  res.send('Good morning, ' + req.params['name'])
+app.get('/', (req, res) => {
+  let responseText = 'Hello World!'
+  responseText += `Requested at: ${req.requestTime}`
+  res.send(responseText)
 })
+// app.use(express.static('public'))
 
-app.put('/', (req, res) => {
-  let a = 'some string'
-  res.json(a)
-})
-
-app.delete('/del', (req, res) => {
-  let b = 'delete something'
-  res.json(b)
-})
 app.listen(3000)

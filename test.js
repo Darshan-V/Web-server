@@ -12,6 +12,6 @@ app.get('/', (req, res) => {
   responseText += `Requested at: ${req.requestTime}`
   res.send(responseText)
 })
-// app.use(express.static('public'))
+// app.use(app.static('./public'))
 
 app.listen(3000)

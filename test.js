@@ -1,17 +1,11 @@
 import myExpress from './lib/myexpress.js'
-let app = myExpress()
 
-const requestTime = function (req, res, next) {
-  req.requestTime = Date.now()
-  next()
-}
-app.use(requestTime)
+const app = myExpress()
 
-app.get('/', (req, res) => {
-  let responseText = 'Hello World!'
-  responseText += `Requested at: ${req.requestTime}`
-  res.send(responseText)
+app.get('/greet', function (req, res) {
+  res.send('Good evening')
 })
-// app.use(app.static('./public'))
+
+app.use(app.ztatic('public'))
 
 app.listen(3000)

@@ -1,0 +1,144 @@
+.task {
+  display: flex;
+  background: white;
+  padding: 8px;
+  border-radius: 3px;
+  height: fit-content;
+  flex-wrap: wrap;
+  width: inherit;
+  margin-bottom: 0.5rem;
+  border-left: solid rgb(239, 235, 235) 3px;
+  border-color: white;
+  border-bottom-style: groove;
+}
+
+.todoLists {
+  height: calc(100vh - 350px);
+  overflow-y: auto;
+}
+
+.innerContentContainer {
+  width: 100%;
+  background-color: white;
+}
+
+.innerContent {
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  background-color: white;
+  display: none;
+  border-top: groove;
+}
+
+.notesdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  float: left;
+  width: 60%;
+  padding-top: 5px;
+}
+
+.notes {
+  display: flex;
+  justify-content: flex-start;
+  width: 380px;
+  height: 185px;
+  margin-top: 0.25rem;
+  border: rgb(174, 173, 173) solid 1px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(245, 174, 179);
+  resize: none;
+}
+
+.doneList {
+  display: none;
+}
+
+/* .datepriority {} */
+
+.clearTasks {
+  background-color: rgb(222, 222, 193);
+}
+
+.clearTasks:hover {
+  background-color: crimson;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+footer.DoneTasksdiv {
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  bottom: 1rem;
+  padding: 0.7rem;
+  width: 100%;
+  background-color: rgb(207, 206, 160);
+  cursor: pointer;
+}
+
+.doneTasks,
+.showAll {
+  padding: 10px;
+  background-color: rgb(222, 222, 193);
+}
+
+.doneTasks:hover,
+.showAll:hover {
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.clearDoneTasks {
+  padding-left: 50px;
+  padding-right: 50px;
+  cursor: pointer;
+  background-color: rgb(222, 222, 193);
+}
+
+.clearDoneTasks:hover {
+  border-radius: 15px;
+  background-color: rgb(222, 222, 193);
+}
+
+.Details {
+  border-radius: 10%;
+  width: 5%;
+  height: 100%;
+  float: right;
+  padding: 6px;
+  border: none;
+  font-size: 30px;
+}
+
+.Details:hover {
+  background-color: rgb(202, 202, 202);
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.duedate {
+  margin-right: 200px;
+  font-size: larger;
+  background-color: azure;
+}
+
+.priority {
+  margin-right: 200px;
+  font-size: large;
+}
+
+.deleteTask {
+  display: flex;
+  justify-content: flex-end;
+  font-size: large;
+  cursor: pointer;
+}
+
+.deleteTask:hover {
+  background-color: crimson;
+  border-radius: 20px;
+}

@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    
-    <title>Document</title>
-</head>
-<body>
-   <h1>Hello World</h1> 
-</body>
+<html>
+
+  <head>
+    <title>TODO</title>
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/inner.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="inputvalue">
+        +
+        <input class="inputVal" id="newtask" type="text" placeholder="New task..." value="" autofocus />
+      </div>
+      <div class="todoList"></div>
+      <div class="myTodo">
+
+      </div>
+    </div>
+  </body>
+  <footer class="DoneTasksdiv" id="DoneTasksdiv">
+    <input class="doneTasks" type="button" value=" Hide Done Tasks" />
+    <input type="button" class="showAll" value="Show All Tasks">
+    <button class="clearDoneTasks"">Clear Done Tasks </button>
+    <button class=" clearTasks">Clear all Tasks</button>
+
+  </footer>
+  <script type="module" src="./index.js"></script>
+
+
 </html>
